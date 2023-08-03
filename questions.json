@@ -1,562 +1,326 @@
 [
-	{
-		"//" : "Copyright 2018 Atos SE and Worldline",
-		"//" : "Licensed under MIT (https://github.com/atosorigin/DevOpsMaturityAssessment/blob/master/LICENSE)",
-		"SectionName" : "Introduction",
-		"Questions" : [
-			{
-				"Type" : "Banner",
-				"QuestionText" : "The goal of this questionaire is to help you assess the DevOps maturity of your team and to help you understand what might be the appropriate next steps for you on your DevOps journey.<br><br>These questions are intended to be completed for one team (typically reporting to the same line manager and usually consisting of between 5 and 15 people)."
-			}
-		]
-	},
-	{
-		"SectionName" : "Team Agility",
-		"SpiderPos" : 2,
-		"Questions" : [
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does the team have a new, potentially shippable, version of the product available every 1-2 weeks?"
-			},
-			{
-				"Type" : "Checkbox",
-				"QuestionText" : "Which of the following are measured by the team (tick all that apply)?",
-				"Answers" : [
-					{"Answer" : "Elapsed lead time to deliver valuable changes (from initial request to production)", "Score" : 0.5},
-					{"Answer" : "Frequency of deployments into production", "Score" : 0.5},
-					{"Answer" : "Change failure rate", "Score" : 0.5},
-					{"Answer" : "Time to restore service after a failure", "Score" : 0.5}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does the team regularly meet to discuss what is working well, what isn't working well and what they can improve, and the top improvement items are implemented?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does the team take actions to ensure that the team does not create or experience bottlenecks with/for other teams?",
-				"Answers" : [
-					{"Answer" : "Yes, and the actions are effective", "Score" : 1},
-					{"Answer" : "Yes, but the actions are not always effective", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Are any work items that are blocked swiftly identified and then people collaborate to rectify the situation?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Is there a clearly defined mechanism for prioritising the backlog?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does the team work on the highest priority items in the backlog?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Are the most experienced team members allocated last so they can help others develop cross functional skills and be free to focus on the most business critical or complex problems?"
-			},
-			{
-				"Type" : "Checkbox",
-				"QuestionText" : "Does the team have fast feedback loops in place (tick all that apply)?",
-				"Answers" : [
-					{"Answer" : "From testers: usually less than 1 day", "Score" : 0.5},
-					{"Answer" : "From the product owner: usually less than 3 days", "Score" : 0.5},
-					{"Answer" : "From customers: usually less than 2 weeks", "Score" : 0.5},
-					{"Answer" : "From end users: usually less than 2 weeks", "Score" : 0.5}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Are there proactive steps taken to ensure there is no major dependency on \"super heroes\" (e.g. pair programming, mob learning, real options)?"
-			}
-		]
-	},
-	{
-		"SectionName" : "Collaboration",
-		"SpiderPos" : 7,
-		"Questions" : [
-			{
-				"Type" : "Option",
-				"QuestionText" : "Are knowledge and interests shared within the team and with other teams within the organisation (for example via communities of interest)?",
-				"Answers" : [
-					{"Answer" : "Yes", "Score" : 1},
-					{"Answer" : "Yes, but only within the team", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 1}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does the team have methods in place for asynchronous communication (for example Kanban Board, JIRA, Slack, Circuit)?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Do people on the team have mechanisms to collaborate with people outside of the team?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Are people on the team willing to work outside their usual specialism?",
-				"Answers" : [
-					{"Answer" : "Everyone on the team is willing to do this", "Score" : 1},
-					{"Answer" : "Some people on the team are willing to do this", "Score" : 0.5},
-					{"Answer" : "Generally people on the team prefer not to do this", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Do people on the team have a preference towards the most immediate (information rich) comunication method available (e.g. voice call rather than email)?",
-				"Answers" : [
-					{"Answer" : "Everyone on the team does", "Score" : 1},
-					{"Answer" : "Most people on the team do", "Score" : 0.5},
-					{"Answer" : "Most people on the team do not", "Score" : 0}
-					]					
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Is there sufficient opportunity for people on the team to meet face to face?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "How frequently are there misunderstandings between members of the team?",
-				"Answers" : [
-					{"Answer" : "Hardly ever", "Score" : 1},
-					{"Answer" : "Fairly frequently (at least once per week)", "Score" : 0.5},
-					{"Answer" : "Very frequently (at least once per day)", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Do people on the team share their ideas/concerns with the rest of the team and are they fairly represented?",
-				"Answers" : [
-					{"Answer" : "Yes, always", "Score" : 1},
-					{"Answer" : "Yes, most of the time", "Score" : 0.5},
-					{"Answer" : "Hardly ever", "Score" : 0}
-					]
-			}
-		]
-	},
-	{
-		"SectionName" : "Automation",
-		"SpiderPos" : 3,
-		"Questions" : [
-			{
-				"Type" : "Option",
-				"SubCategory" : "Environments",
-				"QuestionText" : "Are development and test environments consistent with production environments?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Is the provisioning, configuration and management of infrastructure (e.g. networks, storage, etc.) automated (for example by using Infrastructure as Code)?",
-				"Answers" : [
-					{"Answer" : "Yes", "Score" : 1},
-					{"Answer" : "Partially", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Checkbox",
-				"SubCategory" : "Environments",
-				"QuestionText" : "For which of these is the configuration and management of environments automated (tick all that apply)?",
-				"Answers" : [
-					{"Answer" : "Virtual machines", "Score" : 0.5},
-					{"Answer" : "Networks", "Score" : 0.5},
-					{"Answer" : "Operating systems", "Score" : 0.5},
-					{"Answer" : "Security elements", "Score" : 0.5},
-					{"Answer" : "The application stacks", "Score" : 0.5},
-					{"Answer" : "The applications", "Score" : 0.5}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Environments",
-				"QuestionText" : "Are the required environments (e.g. dev, test, integration) available in line with demand (i.e. at the right time or in a way that doesn’t incur delay to activity)?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Environments",
-				"QuestionText" : "Is the provisioning, configuration and management of environments automated?",
-				"Answers" : [
-					{"Answer" : "Yes, and scaling is automatic", "Score" : 2},
-					{"Answer" : "Yes, but scaling is manual", "Score" : 1},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Testing",
-				"QuestionText" : "Does the team have a high degree of automated unit tests in place (testing individual modules)?",
-				"Answers" : [
-					{"Answer" : "Yes, automated tests are in place and run on every build", "Score" : 1},
-					{"Answer" : "Yes, automated tests are in place", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Testing",
-				"QuestionText" : "Does the team have a high degree of automated integration tests in place (testing the interaction of modules with each other)?",
-				"Answers" : [
-					{"Answer" : "Yes, automated tests are in place and run on every build", "Score" : 1},
-					{"Answer" : "Yes, automated tests are in place", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Testing",
-				"QuestionText" : "Does the team have a high degree of automated system tests in place (confirming overall system functionality meets requirements)?",
-				"Answers" : [
-					{"Answer" : "Yes, automated tests are in place and run on every build", "Score" : 1},
-					{"Answer" : "Yes, automated tests are in place", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Testing",
-				"QuestionText" : "Does the team have a high degree of automated performance tests in place?",
-				"Answers" : [
-					{"Answer" : "Yes, automated tests are in place and run on every build", "Score" : 1},
-					{"Answer" : "Yes, automated tests are in place", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Static Analysis",
-				"QuestionText" : "Does the team complete automated scanning of source code assets?",
-				"Answers" : [
-					{"Answer" : "Yes, automated scanning is in place and run on every build", "Score" : 1},
-					{"Answer" : "Yes, automated scanning is in place", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Static Analysis",
-				"QuestionText" : "Does the team complete automated scanning of binaries?",
-				"Answers" : [
-					{"Answer" : "Yes, automated scanning is in place and run on every build", "Score" : 1},
-					{"Answer" : "Yes, automated scanning is in place", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Static Analysis",
-				"QuestionText" : "Is code automatically scanned for quality during a build?",
-				"Answers" : [
-					{"Answer" : "Yes, automated scanning is in place and run on every build", "Score" : 1},
-					{"Answer" : "Yes, automated scanning is in place", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does failure to meet coding standards or security rules trigger a break in the build?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Is automation code developed with the same rigor as product code (e.g. testing, source control)?"
-			}			
-		]
-	},
-	{
-		"SectionName" : "Architecture and Design",
-		"SpiderPos" : 5,
-		"Questions" : [
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does the architecture of the application consist of loosely coupled components (choose the most accurate description)?",
-				"Answers" : [
-					{"Answer" : "The application is built from a number of stateless components with scaling and resilience provided at the application layer (full MicroServices)", "Score" : 3},
-					{"Answer" : "The application is made up of several separate components but relies on external solutions to provide availability and scalability", "Score" : 2},
-					{"Answer" : "The application is largely monolithic but made up of code modules that can be worked on independently and then re-compiled into a single unit", "Score" : 1},
-					{"Answer" : "The application is built up of monolithic code and can only be changed in its entirety as part of a release schedule", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Checkbox",
-				"QuestionText" : "Does the architecture enable development, testing and other QA activities to be representative and performed independently of each another without impacting production (tick all that apply)?",
-				"Answers" : [
-					{"Answer" : "There are fully separate development, test and QA environments", "Score" : 0.5},
-					{"Answer" : "Environments are regularly re-built or synchronised (at least monthly)", "Score" : 0.5},
-					{"Answer" : "The 3 environments are similar at all levels (resilience, performance, security, dependencies)", "Score" : 0.5},
-					{"Answer" : "Each environment can be torn down and rebuilt without affecting other environments", "Score" : 0.5},
-					{"Answer" : " Environment specific configuration items are decoupled from the code in order to accelerate rebuilds", "Score" : 0.5}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does the architecture enable the deployment of services independently of one another?",
-				"Answers" : [
-					{"Answer" : "Yes, every element of functionality can be updated individually and applied to the application", "Score" : 2},
-					{"Answer" : "Partially, some elements can be updated independently, but there are certain core components that need to be updated together in order to maintain functionality", "Score" : 1},
-					{"Answer" : "No, updates to the system need to be performed together in a formal release cycle", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Are all application logs written to a central log repository automatically with the configuration included in the environment design to allow portability between environments?"
-			}
-		]
-	},
-	{
-		"SectionName" : "DevOps Practices",
-		"SpiderPos" : 6,
-		"Questions" : [
-			{
-				"Type" : "Checkbox",
-				"SubCategory" : "CI",
-				"QuestionText" : "Does the team manage their source code in a central source control system (tick all that apply)?",
-				"Answers" : [
-					{"Answer" : "We have a common code repository (e.g. Git based repo)", "Score" : 0.5},
-					{"Answer" : "We have a defined branching structure", "Score" : 0.5},
-					{"Answer" : "We have defined repository structure", "Score" : 0.5},
-					{"Answer" : "Our structure and branching strategy are aligned to our Dev, Test, and Prod environments (enabling a smooth flow between environments)", "Score" : 0.5}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "CI",
-				"QuestionText" : "How frequently do developers integrate their changes into a shared mainline (trunk)?",
-				"Answers" : [
-					{"Answer" : "Code is integrated at least once per day", "Score" : 2},
-					{"Answer" : "Code is integrated at least weekly", "Score" : 1},
-					{"Answer" : "Code is integrated infrequently but at least once a month", "Score" : 0.5},
-					{"Answer" : "Code is integrated on an ad hoc basis when the developer feels it is ready to share", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Code Review",
-				"QuestionText" : "Is there a defined code review and approval process?",
-				"Answers" : [
-					{"Answer" : "We have a targeted code review process that is appropriate and ensures code is published in a timely manner", "Score" : 1},
-					{"Answer" : "We have a code review process but the process incurs delays and hinders deployments", "Score" : 0.5},
-					{"Answer" : "We have no code review process and bugs can frequently be integrated into the mainline (trunk)", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "CD",
-				"QuestionText" : "Whenever code is integrated with a shared mainline (trunk), are automated processes triggered?",
-				"Answers" : [
-					{"Answer" : "Yes, an automated build of the software is triggered into a production-like environment, automated tests are then triggered and software is available to be automatically deployed into production", "Score" : 2},
-					{"Answer" : "Yes, an automated build of the software is triggered into a production-like environment, manual tests are then performed before the release is manually deployed into production", "Score" : 1},
-					{"Answer" : "Yes, an automated build of the software is triggered, however this build is then manually deployed into the relevant environments (QA and Prod)", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "CI",
-				"QuestionText" : "Is highest priority always given to fixing a broken build?",
-				"Answers" : [
-					{"Answer" : "Yes, builds are fixed / rolled back within 10 minutes", "Score" : 2},
-					{"Answer" : "Yes, builds are fixed / rolled back  within 1 hour", "Score" : 1},
-					{"Answer" : "Yes, builds are fixed / rolled back  within a day", "Score" : 0.5},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "CI",
-				"QuestionText" : "Are adequate notifications in place to communicate the build status and failures to the team (e.g. automated e-mails, slack, circuit)?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "CD",
-				"QuestionText" : "Is it possible to roll back the application cleanly and reliably?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Refactoring",
-				"QuestionText" : "Does the team practice regular refactoring of their code?",
-				"Answers" : [
-					{"Answer" : "Yes, code is often updated independently of new functions or features to ensure technical debt is minimised", "Score" : 1},
-					{"Answer" : "No, code is only updated to enable new features or functionality", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Refactoring",
-				"QuestionText" : "Is time allocated/dedicated to refactoring in order to improve code quality and reduce technical debt?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Refactoring",
-				"QuestionText" : "Are there sufficient automated tests in place to enable developers to refactor with confidence?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "TDD",
-				"QuestionText" : "How widely does the team practice Test Driven Development (TDD), ensuring that automated tests are developed in advance of new features?", 
-				"Answers" : [
-					{"Answer" : "All product code is developed using TDD", "Score" : 2},
-					{"Answer" : "Some product code is developed using TDD", "Score" : 1},
-					{"Answer" : "TDD is not used at all", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "TDD",
-				"QuestionText" : "Is a standard test framework (such as JUnit) used by the team?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "TDD",
-				"QuestionText" : "Is the refactoring step of the TDD cycle usually applied?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "TDD",
-				"QuestionText" : "Are mocks/stubs/simulators used to ensure that tests can be run quickly, frequently and repeatably?"
-			}
-		]
-	},
-	{
-		"SectionName" : "Org Structure, Culture and Incentives",
-		"SpiderPos" : 1,
-		"Questions" : [
-			{
-				"Type" : "Option",
-				"SubCategory" : "Organisation Structure",
-				"QuestionText" : "Is the team a cross functional delivery team comprising of development, testing and operations expertise?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Incentivisation",
-				"QuestionText" : "Are incentives for people on the team (both financial and non-financial) aligned to overall team results?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Organisation Structure",
-				"QuestionText" : "Are those responsible for designing, developing, testing and operating the application all part of the same team?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does the team have accountability for the product throughout its life-cycle (introduction, growth, maturity, decline)?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Culture",
-				"QuestionText" : "Does the team have a culture of experimentation and innovation?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Culture",
-				"QuestionText" : "Does the team have a high trust culture which enables autonomy?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Incentivisation",
-				"QuestionText" : "Do people involved in developing and running the application have aligned incentives and goals?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does the team have a say in what they work on (e.g. self selection days)?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Organisation Structure",
-				"QuestionText" : "Does the organisation's structure catalyse and support a DevOps approach?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Is there a team charter that describes how the team behaves and works together?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Incentivisation",
-				"QuestionText" : "Is there a clear vision and purpose for the product?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Are all the product's stakeholders identified and engaged?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Incentivisation",
-				"QuestionText" : "Is the team aligned and incentivised to a measurable business outcome?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Do management and the wider organisation see the value in protecting time for continuous improvement?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Does the team have enough time to learn new technologies, tools and practices?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Organisation Structure",
-				"QuestionText" : "How frequently is there interaction between the business and the development team?",
-				"Answers" : [
-					{"Answer" : "Business users are embedded within the team", "Score" : 2},
-					{"Answer" : "The team meets with the business at least every week", "Score" : 1},
-					{"Answer" : "The team meets with the business at least every month", "Score" : 0.5},
-					{"Answer" : "Rarely or not at all", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Culture",
-				"QuestionText" : "Do senior stakeholders buy into and support the DevOps approach?",
-				"Answers" : [
-					{"Answer" : "Yes, we rarely have issues with business cases or bureaucratic processes", "Score" : 2},
-					{"Answer" : "Yes, there is buy-in and understanding, but business processes are still too rigid", "Score" : 1},
-					{"Answer" : "No", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Culture",
-				"QuestionText" : "Do members of the team practice continuous learning?"
-			},
-			{
-				"Type" : "Option",
-				"SubCategory" : "Culture",
-				"QuestionText" : "Does the team have a feedback culture (where people are happy to quickly share negative and positive feedback)?"
-			}
-		]
-	},
-	{
-		"SectionName" : "Standardisation",
-		"SpiderPos" : 5,
-		"Questions" : [
-			{
-				"Type" : "Checkbox",
-				"QuestionText" : "Has the organisation standardised on a set of tooling standards (tick all that apply)?",
-				"Answers" : [
-					{"Answer" : "We have a defined set of CI/CD tooling that is universally used", "Score" : 1},
-					{"Answer" : "We have defined code repository tooling and standardised usage processes for them (e.g. branching pattern)", "Score" : 1},
-					{"Answer" : "We have defined monitoring tooling", "Score" : 1},
-					{"Answer" : "We have defined patching/upgrade tooling and processes (e.g. immutable vs. mutable)", "Score" : 1}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Has the organisation standardised on a set of application stacks/development languages?",
-				"Answers" : [
-					{"Answer" : "Yes, with a sufficient portfolio of options to meet our development needs", "Score" : 2},
-					{"Answer" : "Yes, but with an insufficient portfolio of options to meet our development needs", "Score" : 1},
-					{"Answer" : "No, any team can choose any stack/language without constraint", "Score" : 0}
-					]
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "Do you make the best use of SaaS (Software as a Service) for utility applications (i.e. ones not used for competitive advantage such as version control)?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "As much as makes sense, do you use PaaS (Platform as a Service)?"
-			},
-			{
-				"Type" : "Option",
-				"QuestionText" : "As much as makes sense, do you use IaaS (Infrastructure as a Service)?"
-			}
-		]
-	}
-]	
+    {
+        "Questions": [
+            {
+                "QuestionText": "El objetivo de este cuestionario es ayudarte a evaluar la madurez de DevOps de tu equipo y entender cuáles podrían ser los siguientes pasos adecuados para tu viaje en DevOps.<br><br>Estas preguntas están destinadas a ser completadas para un equipo (típicamente reportando al mismo gerente y usualmente consistiendo de entre 5 y 15 personas).",
+                "Type": "Banner"
+            }
+        ],
+        "SectionName": "Introducción"
+    },
+    {
+        "Questions": [
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene una nueva versión del producto, potencialmente lista para ser enviada, disponible cada 1-2 semanas?"
+            },
+            {
+                "Type": "Checkbox",
+                "QuestionText": "¿Qué de lo siguiente es medido por el equipo (marca todas las opciones que correspondan)?",
+                "Answers": [
+                    {"Answer": "Tiempo transcurrido para entregar cambios valiosos (desde la solicitud inicial hasta la producción)", "Score": 0.5},
+                    {"Answer": "Frecuencia de implementaciones en producción", "Score": 0.5},
+                    {"Answer": "Tasa de fallos por cambio", "Score": 0.5},
+                    {"Answer": "Tiempo para restaurar el servicio después de una falla", "Score": 0.5}
+                ]
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo se reúne regularmente para discutir qué está funcionando bien, qué no está funcionando bien, qué pueden mejorar y los principales puntos de mejora se implementan?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo toma acciones para asegurarse de que no crea o experimenta cuellos de botella con/para otros equipos?",
+                "Answers": [
+                    {"Answer": "Sí, y las acciones son efectivas", "Score": 1},
+                    {"Answer": "Sí, pero las acciones no siempre son efectivas", "Score": 0.5},
+                    {"Answer": "No", "Score": 0}
+                ]
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Se identifican rápidamente los elementos de trabajo que están bloqueados y luego las personas colaboran para rectificar la situación?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Existe un mecanismo claramente definido para priorizar el backlog?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo trabaja en los elementos de mayor prioridad en el backlog?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Se asignan a los miembros más experimentados del equipo al final para que puedan ayudar a otros a desarrollar habilidades interfuncionales y estar libres para centrarse en los problemas más críticos o complejos para el negocio?"
+            },
+            {
+                "Type": "Checkbox",
+                "QuestionText": "¿El equipo tiene bucles de retroalimentación rápida implementados (marca todas las opciones que correspondan)?",
+                "Answers": [
+                    {"Answer": "De los testers: generalmente menos de 1 día", "Score": 0.5},
+                    {"Answer": "Del dueño del producto: generalmente menos de 3 días", "Score": 0.5},
+                    {"Answer": "De los clientes: generalmente menos de 2 semanas", "Score": 0.5},
+                    {"Answer": "De los usuarios finales: generalmente menos de 2 semanas", "Score": 0.5}
+                ]
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Se toman medidas proactivas para asegurar que no haya una dependencia importante en \"super héroes\" (por ejemplo, programación en pareja, aprendizaje en equipo, opciones reales)?"
+            }
+        ],
+        "SectionName": "Agilidad del Equipo",
+        "SpiderPos": 2
+    },
+    {
+        "Questions": [
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo comparte el conocimiento e intereses dentro del equipo y con otros equipos dentro de la organización (por ejemplo, a través de comunidades de interés)?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene métodos para la comunicación asíncrona (por ejemplo, Kanban Board, JIRA, Slack, Circuit)?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Las personas del equipo tienen mecanismos para colaborar con personas fuera del equipo?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Las personas del equipo están dispuestas a trabajar fuera de su especialidad habitual?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Las personas del equipo tienen preferencia por el método de comunicación más inmediato (ricamente informativo) disponible (por ejemplo, una llamada de voz en lugar de un correo electrónico)?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Existe suficiente oportunidad para que las personas del equipo se reúnan cara a cara?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Con qué frecuencia hay malentendidos entre los miembros del equipo?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Las personas del equipo comparten sus ideas y preocupaciones con el resto del equipo y están representadas de manera justa?"
+            }
+        ],
+        "SectionName": "Colaboración",
+        "SpiderPos": 7
+    },
+    {
+        "Questions": [
+            {
+                "QuestionText": "¿Los entornos de desarrollo y pruebas son consistentes con los entornos de producción?",
+                "SubCategory": "Entornos",
+                "Type": "Option"
+            },
+            {
+                "QuestionText": "¿La provisión, configuración y gestión de la infraestructura (por ejemplo, redes, almacenamiento, etc.) está automatizada (por ejemplo, mediante el uso de Infrastructure as Code)?",
+                "Type": "Option"
+            },
+            {
+                "Type": "Checkbox",
+                "QuestionText": "Para cuáles de estos elementos se automatiza la configuración y gestión de los entornos (marca todas las opciones que correspondan)?",
+                "SubCategory": "Entornos",
+                "Answers": [
+                    {"Answer": "Máquinas virtuales", "Score": 0.5},
+                    {"Answer": "Redes", "Score": 0.5},
+                    {"Answer": "Sistemas operativos", "Score": 0.5},
+                    {"Answer": "Elementos de seguridad", "Score": 0.5},
+                    {"Answer": "Pilas de aplicación", "Score": 0.5},
+                    {"Answer": "Las aplicaciones", "Score": 0.5}
+                ]
+            },
+            {
+                "QuestionText": "¿Los entornos requeridos (por ejemplo, dev, pruebas, integración) están disponibles en línea con la demanda (es decir, en el momento adecuado o de una manera que no incurra en retrasos en la actividad)?",
+                "SubCategory": "Entornos",
+                "Type": "Option"
+            },
+            {
+                "QuestionText": "¿La provisión, configuración y gestión de los entornos está automatizada?",
+                "SubCategory": "Entornos",
+                "Type": "Option",
+                "Answers": [
+                    {"Answer": "Sí, y la escalabilidad es automática", "Score": 2},
+                    {"Answer": "Sí, pero la escalabilidad es manual", "Score": 1},
+                    {"Answer": "No", "Score": 0}
+                ]
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene un alto grado de pruebas unitarias automatizadas en su lugar (pruebas de módulos individuales)?",
+                "SubCategory": "Pruebas"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene un alto grado de pruebas de integración automatizadas en su lugar (pruebas de interacción de módulos entre sí)?",
+                "SubCategory": "Pruebas"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene un alto grado de pruebas de sistema automatizadas en su lugar (confirmando que la funcionalidad general del sistema cumple con los requisitos)?",
+                "SubCategory": "Pruebas"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene un alto grado de pruebas de rendimiento automatizadas en su lugar?",
+                "SubCategory": "Pruebas"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo completa el escaneo automatizado de los activos de código fuente?",
+                "SubCategory": "Análisis Estático"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo completa el escaneo automatizado de binarios?",
+                "SubCategory": "Análisis Estático"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El código se escanea automáticamente en busca de calidad durante una compilación?",
+                "SubCategory": "Análisis Estático"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El incumplimiento de los estándares de codificación o reglas de seguridad provoca una interrupción en la compilación?",
+                "SubCategory": "Análisis Estático"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El código de automatización se desarrolla con el mismo rigor que el código del producto (por ejemplo, pruebas, control de versiones)?",
+                "SubCategory": "Automatización"
+            }
+        ],
+        "SectionName": "Automatización",
+        "SpiderPos": 3
+    },
+    {
+        "Questions": [
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo es un equipo de entrega multifuncional que incluye experiencia en desarrollo, pruebas y operaciones?",
+                "SubCategory": "Estructura de la Organización"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Los incentivos para las personas del equipo (tanto financieros como no financieros) están alineados con los resultados generales del equipo?",
+                "SubCategory": "Incentivos"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Quienes son responsables de diseñar, desarrollar, probar y operar la aplicación forman parte del mismo equipo?",
+                "SubCategory": "Estructura de la Organización"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene responsabilidad por el producto a lo largo de su ciclo de vida (introducción, crecimiento, madurez, declive)?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene una cultura de experimentación e innovación?",
+                "SubCategory": "Cultura"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene una cultura de alta confianza que permite la autonomía?",
+                "SubCategory": "Cultura"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Las personas involucradas en el desarrollo y ejecución de la aplicación tienen incentivos y objetivos alineados?",
+                "SubCategory": "Incentivos"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene voz en lo que trabajan (por ejemplo, días de auto selección)?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿La estructura de la organización cataliza y apoya un enfoque de DevOps?",
+                "SubCategory": "Estructura de la Organización"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Existe un estatuto del equipo que describe cómo se comporta y trabaja el equipo?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Hay una visión y propósito claros para el producto?",
+                "SubCategory": "Incentivos"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Se han identificado y comprometido todos los interesados del producto?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo está alineado e incentivado hacia un resultado empresarial medible?",
+                "SubCategory": "Incentivos"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿La dirección y la organización en general ven el valor de proteger el tiempo para la mejora continua?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene suficiente tiempo para aprender nuevas tecnologías, herramientas y prácticas?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Los usuarios de negocios están integrados en el equipo?",
+                "SubCategory": "Estructura de la Organización"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Los principales interesados ​​compran y apoyan el enfoque de DevOps?",
+                "SubCategory": "Cultura"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Los miembros del equipo practican el aprendizaje continuo?",
+                "SubCategory": "Cultura"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿El equipo tiene una cultura de retroalimentación (donde las personas están dispuestas a compartir rápidamente comentarios negativos y positivos)?",
+                "SubCategory": "Cultura"
+            }
+        ],
+        "SectionName": "Estructura Organizacional, Cultura e Incentivos",
+        "SpiderPos": 1
+    },
+    {
+        "Questions": [
+            {
+                "Type": "Checkbox",
+                "QuestionText": "¿La organización se ha estandarizado en un conjunto de normas de herramientas de CI/CD (tick all that apply)?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿La organización se ha estandarizado en un conjunto de pilas de aplicaciones / lenguajes de desarrollo?",
+                "Answers": [
+                    {"Answer": "Sí, con un portafolio suficiente de opciones para satisfacer nuestras necesidades de desarrollo", "Score": 2},
+                    {"Answer": "Sí, pero con un portafolio insuficiente de opciones para satisfacer nuestras necesidades de desarrollo", "Score": 1},
+                    {"Answer": "No, cualquier equipo puede elegir cualquier conjunto de tecnología sin restricciones", "Score": 0}
+                ]
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "¿Hacen el mejor uso de SaaS (Software as a Service) para aplicaciones de servicios públicos (es decir, aquellas que no se utilizan para ventaja competitiva, como el control de versiones)?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "En la medida de lo posible, ¿utilizan PaaS (Platform as a Service)?"
+            },
+            {
+                "Type": "Option",
+                "QuestionText": "En la medida de lo posible, ¿utilizan IaaS (Infrastructure as a Service)?"
+            }
+        ],
+        "SectionName": "Estandarización",
+        "SpiderPos": 5
+    }
+]
